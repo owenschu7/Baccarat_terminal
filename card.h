@@ -25,6 +25,6 @@ private:
     int m_value;
     char m_suit;
 
-}
+};
 
-#end
+#endif
