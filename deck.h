@@ -14,9 +14,11 @@ public:
 
     Card deal_card();
     void shuffle_deck();
+    void print_deck();
 
 private:
     vector<Card> m_deck;
+    int m_length;
 };
 
 
