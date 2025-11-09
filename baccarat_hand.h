@@ -14,13 +14,17 @@ public:
     Baccarat_hand();
     Baccarat_hand(Card first_card);
     Baccarat_hand(Card first_card, Card second_card);
+    Baccarat_hand(Card first_card, Card second_card, Card third_card);
     ~Baccarat_hand();
 
+    void add_second_card(Card second_card);
     void add_third_card(Card third_card);
 
     Card get_first_card();
     Card get_second_card();
     Card get_third_card();
+
+    int calc_total();
 
     int get_total();
 
@@ -30,7 +34,7 @@ private:
     Card m_first_card;
     Card m_second_card;
     Card m_third_card;
-    int total;
-}
+    int m_total;
+};
 
 #endif
