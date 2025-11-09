@@ -43,6 +43,25 @@ void Card::set_value(int value)
     m_value = value;
 }
 
+int Card::calc_card_value()
+{
+    if (2 <= m_value && m_value <= 10)
+    {
+        //number card 2-10
+        return m_value % 10;
+    }
+    else if ((11 <= m_value && m_value <= 13) || m_value == 0)
+    {
+        //jack, queen, king or empty 
+        return 0;
+    }
+    else
+    {
+        //ace
+        return 1;
+    }
+}
+
 void Card::print_card()
 {
     cout << "printing card..." << endl;

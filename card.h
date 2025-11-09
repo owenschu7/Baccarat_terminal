@@ -19,6 +19,8 @@ public:
     int get_value();
     void set_value(int value);
 
+    int calc_card_value();
+
     void print_card();
 
 private:
