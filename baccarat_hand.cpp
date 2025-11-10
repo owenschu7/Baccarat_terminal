@@ -66,8 +66,7 @@ int Baccarat_hand::calc_total()
 {
     //add all three cards point values together 2-9 = 2-9; 10 = 0; jack(11), queen(12), king(13) = 0; ace(14) = 1
     //if a card hasnt been added to the class yet, it will default to 0
-    int total = (m_first_card.calc_card_value() + m_second_card.calc_card_value() + m_third_card.calc_card_value()) % 10;
-    return total;
+    return (m_first_card.calc_card_value() + m_second_card.calc_card_value() + m_third_card.calc_card_value()) % 10;
 }
 
 int Baccarat_hand::get_total()
