@@ -3,6 +3,7 @@
 #include "deck.h"
 #include "baccarat_hand.h"
 #include "baccarat_table.h"
+#include "player.h"
 
 using namespace std;
 
@@ -12,6 +13,8 @@ int main()
     table1.play_round();
     
     table1.print_history_of_round(1);
+
+    Player owen = Player(100);
 
     return 0;
 }

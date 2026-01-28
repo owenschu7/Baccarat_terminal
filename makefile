@@ -11,8 +11,8 @@
 #    -c           ==> compile only (create a .o file)
 #    -std=c++11   ==> use the C++11 standard
 
-run: main.o card.o deck.o baccarat_hand.o baccarat_table.o
-	g++ -pedantic -Wall -g main.o card.o deck.o baccarat_hand.o baccarat_table.o -o run
+run: main.o card.o deck.o baccarat_hand.o baccarat_table.o player.o
+	g++ -pedantic -Wall -g main.o card.o deck.o baccarat_hand.o baccarat_table.o player.o -o run
 
 main.o: main.cpp card.h deck.h baccarat_hand.h baccarat_table.h player.h
 	g++ -pedantic -Wall -g -c main.cpp
@@ -34,4 +34,4 @@ player.o: player.cpp player.h
 
 
 clean:
-	rm -f run main.o card.o deck.o baccarat_hand.o baccarat_table.o
+	rm -f run main.o card.o deck.o baccarat_hand.o baccarat_table.o player.o

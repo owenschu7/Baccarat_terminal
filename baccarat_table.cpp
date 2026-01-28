@@ -41,9 +41,6 @@ int Baccarat_table::play_round()
     // 2. check for naturals (8 or 9)
     // if either has 8 or 9, no more cards are dealt. game ends immediately.
     if (player_total >= 8 || banker_total >= 8) {
-        cout << "natural detected!" << endl;
-        cout << "player has: " << player_total << endl;
-        cout << "banker has: " << banker_total << endl;
 
         if (player_total > banker_total)
         {
@@ -135,9 +132,6 @@ int Baccarat_table::play_round()
     // 5. final calculation
     player_total = player.get_total();
     banker_total = banker.get_total();
-
-    cout << "player has: " << player_total << endl;
-    cout << "banker has: " << banker_total << endl;
 
     // 6. determine winner and special ez baccarat outcomes
     if (player_total == banker_total)
