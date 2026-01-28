@@ -1,6 +1,7 @@
 //implements the ability to play a round of baccarat and stores the data of all the previous games
 #ifndef BACCARAT_TABLE_H
 #define BACCARAT_TABLE_H
+
 #include <iostream>
 #include <vector>
 #include "baccarat_hand.h"

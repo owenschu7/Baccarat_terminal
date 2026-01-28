@@ -14,7 +14,7 @@
 run: main.o card.o deck.o baccarat_hand.o baccarat_table.o
 	g++ -pedantic -Wall -g main.o card.o deck.o baccarat_hand.o baccarat_table.o -o run
 
-main.o: main.cpp card.cpp deck.cpp baccarat_hand.cpp baccarat_table.cpp
+main.o: main.cpp card.h deck.h baccarat_hand.h baccarat_table.h player.h
 	g++ -pedantic -Wall -g -c main.cpp
 
 deck.o: deck.h deck.cpp card.h
@@ -23,11 +23,15 @@ deck.o: deck.h deck.cpp card.h
 card.o: card.h card.cpp
 	g++ -pedantic -Wall -g -c card.cpp
 
-baccarat_hand.o: card.h card.cpp baccarat_hand.h
+baccarat_hand.o: baccarat_hand.cpp baccarat_hand.h card.h
 	g++ -pedantic -Wall -g -c baccarat_hand.cpp
 
-baccarat_table.o: baccarat_table.h baccarat_hand.h card.h deck.h
+baccarat_table.o: baccarat_table.cpp baccarat_table.h baccarat_hand.h card.h deck.h
 	g++ -pedantic -Wall -g -c baccarat_table.cpp
+
+player.o: player.cpp player.h
+	g++ -pedantic -Wall -g -c player.cpp
+
 
 clean:
 	rm -f run main.o card.o deck.o baccarat_hand.o baccarat_table.o

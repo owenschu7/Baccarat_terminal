@@ -8,14 +8,8 @@ using namespace std;
 
 int main()
 {
-    Deck deck(1);
-    deck.shuffle_deck();
-    
-    Baccarat_hand player = Baccarat_hand(deck.deal_card(), deck.deal_card());
-    Baccarat_hand banker = Baccarat_hand(deck.deal_card(), deck.deal_card());
-
-    cout << "Player has: " << player.get_total() << endl;
-    cout << "Banker has: " << banker.get_total() << endl;
+    Baccarat_table table1;
+    table1.play_round();
 
     return 0;
 }
