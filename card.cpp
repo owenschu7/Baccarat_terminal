@@ -64,8 +64,6 @@ int Card::calc_card_value()
 
 void Card::print_card()
 {
-    cout << "printing card..." << endl;
-    cout << "Value is: " << m_value << endl;
-    cout << "Suit is: " << m_suit << endl;
+    cout << m_value << " of " << m_suit<< endl;
 }
 

@@ -10,6 +10,8 @@ int main()
 {
     Baccarat_table table1;
     table1.play_round();
+    
+    table1.print_history_of_round(1);
 
     return 0;
 }
