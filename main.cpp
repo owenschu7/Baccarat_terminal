@@ -5,16 +5,37 @@
 #include "baccarat_table.h"
 #include "player.h"
 
+#include <string>
+
 using namespace std;
 
 int main()
 {
-    Baccarat_table table1;
-    table1.play_round();
+    cout << "initializing game..." << endl;
+    cout << "Enter number of players: ";
+    int num_players;
+    cin >> num_players;
+    vector<Player *> players;
+
+    for (int i = 0; i < num_players; i++)
+    {
+        cout << "Enter name for player " << i + 1 << ": ";
+        string name;
+        cin >> name;
+
+        cout << "Enter starting cash for " << name << ": ";
+        int starting_cash;
+        cin >> starting_cash;
+
+        players.push_back(new Player(name, starting_cash));
+    }
+
+    cout << "STARTING GAME" << endl << endl;
     
-    table1.print_history_of_round(1);
 
-    Player owen = Player(100);
 
+    Baccarat_table table1;
+    cout << table1.play_round() << endl;
+    
     return 0;
 }

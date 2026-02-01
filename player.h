@@ -1,8 +1,9 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
-#include <vector>
 #include <iostream>
+#include <vector>
+#include <string>
 
 using namespace std;
 
@@ -12,13 +13,16 @@ public:
     Player();
     ~Player();
 
-    Player(int cash);
+    Player(string name, int cash);
+
+    void create_player(string name, int cash) {m_name = name; m_cash = cash;}
 
     void add_outcome(int outcome); // 0 for banker; 1 for player; 2 for tie; 3 for panda; 4 for dragon; also keeps track of how many games played (length of vector)
 
     //need to implement a way to calculate win % from m_outcomes
 
 private:
+    string m_name;
     int m_cash;
     vector<int> m_outcomes;
 };
